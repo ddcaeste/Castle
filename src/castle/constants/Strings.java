@@ -6,5 +6,6 @@ package castle.constants;
  */
 public abstract class Strings 
 {
+    // Data Class
     public static final String FRAME_NAME = "Castle";   // Title of the frame shown
 }

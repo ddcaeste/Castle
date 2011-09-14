@@ -4,7 +4,6 @@ import castle.models.CastleModel;
 import castle.views.screens.IntroScreen;
 import castle.views.screens.MainScreen;
 import castle.views.screens.Screen;
-import java.util.ArrayList;
 
 /**
  *

@@ -2,6 +2,7 @@ package castle.models;
 
 import castle.constants.Screens;
 import castle.views.screens.Screen;
+import java.awt.event.KeyEvent;
 
 /**
  *
@@ -15,10 +16,31 @@ public class CastleModel extends Model
     {
         // Register all screens to this model
         screen = new Screens(this);
-        currentScreen = screen.BOOT_UP_SCREEN;
+        setCurrentScreen(screen.BOOT_UP_SCREEN);
+    }
+    public void setCurrentScreen(Screen currentScreen) 
+    {
+        this.currentScreen = currentScreen;
+        fireStateChanged();
     }
     public Screen getCurrentScreen() 
     {
         return currentScreen;
+    }
+    public Screens getScreen() 
+    {
+        return screen;
+    }
+    public void keyTyped(KeyEvent e) 
+    {
+        currentScreen.keyTyped(e);
+    }
+    public void keyPressed(KeyEvent e) 
+    {
+        currentScreen.keyPressed(e);
+    }
+    public void keyReleased(KeyEvent e) 
+    {
+        currentScreen.keyReleased(e);
     }
 }

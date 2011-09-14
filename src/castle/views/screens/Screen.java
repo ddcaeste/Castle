@@ -4,6 +4,7 @@ import castle.models.CastleModel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.KeyEvent;
 import javax.swing.JPanel;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
@@ -21,6 +22,9 @@ public abstract class Screen extends JPanel implements ChangeListener
         castleModel.addChangeListener(this);
     }
     public abstract void paintScreen(Graphics2D g2D);
+    public abstract void keyTyped(KeyEvent e); 
+    public abstract void keyPressed(KeyEvent e); 
+    public abstract void keyReleased(KeyEvent e); 
     @Override
     public void paintComponent(Graphics g)
     {
